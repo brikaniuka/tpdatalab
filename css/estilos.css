@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zilla+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+nav,
+header {
+    width: 100vw;
+}
+
+header {
+    font-family: 'Roboto';
+    height: 62vh;
+    text-align: center;
+}
+
+nav {
+    color: white;
+    background-color: pink;
+    height: 19vh;
+    padding: 0 5.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: miMovimiento;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode:both;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+}
+
+nav div {
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes miMovimiento {
+
+    from {
+        background-color: pink;
+    }
+    to {
+        background-color: palevioletred;
+    }
+}
+
+nav a,
+nav h1,
+header h1 {
+    font-family: 'Zilla Slab';
+    line-height: 125%;
+    vertical-align: top;
+    font-size: 30px;
+}
+
+nav h1 {
+    font-weight: 600;
+    margin: 0;
+}
+
+header h1 {
+    font-family: 'Zilla Slab';
+    color: palevioletred;
+}
+
+a {
+    text-decoration: none;
+}
+
+header p,
+nav a,
+header a {
+    font-size: 20px;
+}
+
+nav a,
+header a {
+    color: white;
+}
+
+header a {
+    background-color: pink;
+}
+
+nav span {
+    display: none;
+}
+
+.icon-menu {
+    font-size: 6vw;
+}
+
+.icon-menu:hover {
+    color: palevioletred;
+    cursor: pointer;
+}
+
+@media(max-width:992px) {
+    nav div {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav div {
+        display: none;
+    }
+
+    nav span {
+        display: inline;
+    }
+}
+
+section img, video {
+    margin-top: 20%;
+    margin-left: 20px;
+    width: 300px;
+}
+
+section img{
+    filter: grayscale(100%);
+    transition: filter 1s;
+}
+
+img:hover{
+    filter: grayscale(0%)
+}
+
+section video{
+    align-items: center;
+}
+
+header img {
+    margin-top: 20px;
+    width: 150px;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    column-gap: 20%;
+    flex-wrap: wrap;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    text-align: center;
+    top: 19vh;
+    left: 0vw;
+    background-color: palevioletred;
+    width: 100vw;
+    padding: 2vw;
+}
+
+.lightboxOverlay{
+    background-color:gray;
+}
+
+footer{
+    width: 100%;
+    background-color: pink;
+    margin-top: 10px;
+    height: 19vh;
+    padding: 0 5.5vw;
+    display: flex;
+    font-family: 'Zilla Slab';
+}
+
